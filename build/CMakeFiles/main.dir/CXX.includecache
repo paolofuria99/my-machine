@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/EB_Device.h
+string.h
+-
+cmath
+-
+fstream
+-
+streambuf
+-
+string
+-
+sstream
+-
+
+../include/lever.h
+string.h
+-
+cmath
+-
+fstream
+-
+streambuf
+-
+string
+-
+sstream
+-
+EB_Device.h
+../include/EB_Device.h
+iostream
+-
+
+/home/paolo/myMachine/src/lever.cpp
+lever.h
+/home/paolo/myMachine/src/lever.h
+

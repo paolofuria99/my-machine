@@ -1,0 +1,6 @@
+/home/paolo/myMachine/build/CMakeFiles/rebuild_cache.dir
+/home/paolo/myMachine/build/CMakeFiles/edit_cache.dir
+/home/paolo/myMachine/build/CMakeFiles/main.dir
+/home/paolo/myMachine/build/tests/CMakeFiles/rebuild_cache.dir
+/home/paolo/myMachine/build/tests/CMakeFiles/edit_cache.dir
+/home/paolo/myMachine/build/tests/CMakeFiles/catch2Test.dir

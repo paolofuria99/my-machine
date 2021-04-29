@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" style="background-color:white" width="1500" height="1000">
+
+<g>
+<rect x = "150.000000" y = "100" width = "150.000000" height = "40" stroke = "black" stroke-width = "3" fill = "yellow"/>
+</g>
+
+<g transform  = "rotate(-25.000000,225.000000,120)">
+<rect x = "215.000000" y = "120" width = "20" height = "300.000000" stroke = "black" stroke-width = "3" fill = "orange" />
+<circle cx = "225.000000" cy = "120" r = "10" stroke = "black" stroke-width = "3" fill = "white"/>
+</g>
+
+<g>
+<rect x = "176.785479" y = "381.892336" width = "350.000000" height = "20"  stroke = "black" stroke-width = "3" fill = "black" />
+</g>
+
+<polygon points='301.785479,381.892336 351.785479,331.892336 401.785479,381.892336' style='fill:lime;stroke:purple;stroke-width:1' />
+<!-- Shaft -->
+<line x1='201.785479' y1='331.892336' x2='501.785479' y2='331.892336' style='stroke:rgb(255,0,0);stroke-width:2' />
+<!-- Square1 -->
+<rect x='271.785479' y='311.892336' width='20.000000' height='20.000000' style='fill:blue;stroke:black;stroke-width:1' />
+<!-- Square2 -->
+<rect x='401.785479' y='281.892336' width='50.000000' height='50.000000' style='fill:blue;stroke:black;stroke-width:1' />
+</svg> 
