@@ -3,22 +3,44 @@
 
 <g>
 <rect x = "150.000000" y = "100" width = "150.000000" height = "40" stroke = "black" stroke-width = "3" fill = "yellow"/>
+<text x = "150.000000" y = "65" fill = "black"> width_towtruck = 150 </text>
+<line x1 = "150.000000" y1 = "75" x2 = "300.000000" y2 = "75"  stroke = "black" stroke-width  = "2"/>
 </g>
 
 <g transform  = "rotate(-25.000000,225.000000,120)">
 <rect x = "215.000000" y = "120" width = "20" height = "300.000000" stroke = "black" stroke-width = "3" fill = "orange" />
+<text x = "340.000000" y = "270.000000" fill = "black"> length_shaft = 300 </text>
+<line x1 = "330.000000" y1 = "120" x2 = "330.000000" y2 = "420.000000"  stroke = "black" stroke-width  = "2"/>
+<text x = "135.000000" y = "260.000000" fill = "black"> angle=-25 </text>
+<line x1 = "145.000000" y1 = "270.000000" x2 = "215.000000" y2 = "270.000000"  stroke = "black" stroke-width  = "2"/>
 <circle cx = "225.000000" cy = "120" r = "10" stroke = "black" stroke-width = "3" fill = "white"/>
 </g>
 
 <g>
 <rect x = "176.785479" y = "381.892336" width = "350.000000" height = "20"  stroke = "black" stroke-width = "3" fill = "black" />
+<text x = "264.285479" y = "441.892336" fill = "black"> width_platform = 350 </text>
+<line x1 = "176.785479" y1 = "421.892336" x2 = "526.785479" y2 = "421.892336"  stroke = "black" stroke-width  = "2"/>
 </g>
 
+<g>
+<text x = "50.000000" y = "110" fill = "black"> sliding = 150 </text>
+<line x1 = "70.000000" y1 = "120" x2 = "150.000000" y2 = "120"  stroke = "black" stroke-width  = "2"/>
+</g>
 <polygon points='301.785479,381.892336 351.785479,331.892336 401.785479,381.892336' style='fill:lime;stroke:purple;stroke-width:1' />
 <!-- Shaft -->
 <line x1='201.785479' y1='331.892336' x2='501.785479' y2='331.892336' style='stroke:rgb(255,0,0);stroke-width:2' />
+<line x1= '201.785479' y1='341.892336' x2='501.785479' y2='341.892336'  stroke='black' stroke-width='1'/>
+<text x='201.785479' y='361.892336' fill='black'>300</text>
 <!-- Square1 -->
 <rect x='271.785479' y='311.892336' width='20.000000' height='20.000000' style='fill:blue;stroke:black;stroke-width:1' />
+<line x1= '271.785479' y1= '301.892336' x2= '351.785479' y2 = '301.892336'  stroke='black' stroke-width= '1'/>
+<text x='271.785479' y='299.892336' fill='black'>80</text>
+<line x1 = '261.785479' y1= '311.892336' x2= '261.785479' y2= '331.892336'  stroke='black' stroke-width='1'/>
+<text x='258.785479' y='321.892336' transform='rotate(-90 258.785479,321.892336)' fill='black'>20</text>
 <!-- Square2 -->
 <rect x='401.785479' y='281.892336' width='50.000000' height='50.000000' style='fill:blue;stroke:black;stroke-width:1' />
+<line x1= '401.785479' y1= '271.892336' x2= '351.785479' y2 = '271.892336'  stroke= 'black' stroke-width= '1'/>
+<text x='351.785479' y='269.892336' fill='black'>50</text>
+<line x1= '461.785479' y1= '281.892336' x2= '461.785479' y2= '331.892336'  stroke= 'black' stroke-width= '1'/>
+<text x='464.785479' y='281.892336' transform='rotate(90 464.785479,281.892336)'  fill='black'>50</text>
 </svg> 
