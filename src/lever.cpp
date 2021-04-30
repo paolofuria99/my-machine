@@ -1,6 +1,5 @@
 #include "lever.h"
-//#include "EB_Device.h"
-//#include "../src/EB_Device.cpp"
+
 
 using namespace std;
 

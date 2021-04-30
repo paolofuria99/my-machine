@@ -2,6 +2,7 @@
 //#include "EB_Device.h"
 //#include "../src/EB_Device.cpp"
 
+#include <iostream>
 #include <string.h>
 #include <cmath>
 #include <fstream>
@@ -14,7 +15,7 @@
 using namespace std;
 
 
-
+//-----------------imported from EB v3.0.1
 /**
     A function which print the 5 parameters of a device 
 **/
@@ -28,7 +29,8 @@ void eb_printParameters(EbDevice* device){
 }
 
 int main() {
-
+    //Default sizes I created/chose for the imported device
+    //-----------------imported from EB v3.0.1
     EbDevice* MyDevice = new EbDevice;
     double length_shaft=300;
     double width_towtruck=150;
@@ -36,8 +38,7 @@ int main() {
     double rotation=-25;
     double sliding=150;
     string errormsg="ERROR 404: mechanical constraints exceeded";
-
-
+    //-----------end imported
 
     //Objects that are checked. 
     Pol_shaft* myshaft = new Pol_shaft;
@@ -48,15 +49,17 @@ int main() {
     Pol_shaft* tryshaft= new Pol_shaft;
     Pol_squares* trysquares= new Pol_squares;
 
+    //-----------------imported from EB v3.0.1
     MyDevice=eb_init(length_shaft, width_towtruck, width_platform, rotation, sliding);
     if(MyDevice==NULL){
         cout<<errormsg<<endl;
         exit(1);
     }
-        
     eb_printParameters(MyDevice);
+    //-----------end imported
+    
 
-    //Default parameters
+    //Default parameters of my device
     float ShaftLength=300 ;
     float SquareSide1=20 ;
     float SquarePos1=80 ;
@@ -74,9 +77,17 @@ int main() {
 
     //Create a new string in order to create the new svg file with parameters selected, and this string is shown in terminal
     string svg_created;
+    
+    int fine=2;
+    int choice;
+    do{
+        cout<<"\n Welcome! What you want to do? Type a number :"<<endl;
+        cout<<"1 - Build my device "
+
+    }while(fine==1);
 
     int c;
-    int fine=2;
+    fine=2;
     do {
         cout<<"\n Choose a command. Do you want change the default sizes? Type a number :"<<endl;
         cout<< "1 - No" <<endl;

@@ -7,6 +7,7 @@
 #include <streambuf>
 #include <string>
 #include <sstream>
+
 #include "EB_Device.h"
 #include <iostream>
 
