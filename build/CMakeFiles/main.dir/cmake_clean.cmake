@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/main.cpp.o"
   "CMakeFiles/main.dir/src/EB_Device.cpp.o"
   "CMakeFiles/main.dir/src/lever.cpp.o"
+  "CMakeFiles/main.dir/src/myMachine.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -58,7 +58,7 @@ bool eb_drawConstraints(EbDevice* eb_device);
     @param with_measures è true se l'utente vuole disegno con misure
     @return string con codice svg
 **/
-string eb_to_svg(EbDevice* eb_device, bool with_measures);
+string eb_to_svg_Machine(EbDevice* eb_device, bool with_measures);
 
 /**
     A function which calculate coordinate X of CiR

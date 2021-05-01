@@ -86,14 +86,14 @@ Pol_squares * squares_init(float side1, float pos1, float side2, float pos2);
 bool with_measures();
 ~~~ 
 
-**string to_svg()**
+**string to_svg_Machine()**
 ~~~ C++
 /** Function that create a string svg containing the image of the shaft and of the squares
  * 
  *  @param myshaft stucture containg the data of the shaft
  *  @param mysquares stucture containg the data of the squares
  */
-string to_svg(Pol_shaft* myshaft, Pol_squares * mysquares);
+string to_svg_Machine(Pol_shaft* myshaft, Pol_squares * mysquares);
 ~~~ 
 
 **int my_set()**

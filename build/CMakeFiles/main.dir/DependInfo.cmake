@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/paolo/myMachine/main.cpp" "/home/paolo/myMachine/build/CMakeFiles/main.dir/main.cpp.o"
   "/home/paolo/myMachine/src/EB_Device.cpp" "/home/paolo/myMachine/build/CMakeFiles/main.dir/src/EB_Device.cpp.o"
   "/home/paolo/myMachine/src/lever.cpp" "/home/paolo/myMachine/build/CMakeFiles/main.dir/src/lever.cpp.o"
+  "/home/paolo/myMachine/src/myMachine.cpp" "/home/paolo/myMachine/build/CMakeFiles/main.dir/src/myMachine.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

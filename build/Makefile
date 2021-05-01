@@ -217,6 +217,33 @@ src/lever.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lever.cpp.s
 .PHONY : src/lever.cpp.s
 
+src/myMachine.o: src/myMachine.cpp.o
+
+.PHONY : src/myMachine.o
+
+# target to build an object file
+src/myMachine.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/myMachine.cpp.o
+.PHONY : src/myMachine.cpp.o
+
+src/myMachine.i: src/myMachine.cpp.i
+
+.PHONY : src/myMachine.i
+
+# target to preprocess a source file
+src/myMachine.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/myMachine.cpp.i
+.PHONY : src/myMachine.cpp.i
+
+src/myMachine.s: src/myMachine.cpp.s
+
+.PHONY : src/myMachine.s
+
+# target to generate assembly for a file
+src/myMachine.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/myMachine.cpp.s
+.PHONY : src/myMachine.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -236,6 +263,9 @@ help:
 	@echo "... src/lever.o"
 	@echo "... src/lever.i"
 	@echo "... src/lever.s"
+	@echo "... src/myMachine.o"
+	@echo "... src/myMachine.i"
+	@echo "... src/myMachine.s"
 .PHONY : help
 
 

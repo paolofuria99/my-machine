@@ -15,6 +15,11 @@
   "file": "/home/paolo/myMachine/src/EB_Device.cpp"
 },
 {
+  "directory": "/home/paolo/myMachine/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/paolo/myMachine/include  -g   -std=gnu++17 -o CMakeFiles/main.dir/src/myMachine.cpp.o -c /home/paolo/myMachine/src/myMachine.cpp",
+  "file": "/home/paolo/myMachine/src/myMachine.cpp"
+},
+{
   "directory": "/home/paolo/myMachine/build/tests",
   "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/paolo/myMachine/tests/../include  -g   -std=gnu++17 -o CMakeFiles/catch2Test.dir/catch2Main.cpp.o -c /home/paolo/myMachine/tests/catch2Main.cpp",
   "file": "/home/paolo/myMachine/tests/catch2Main.cpp"

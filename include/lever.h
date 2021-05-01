@@ -8,7 +8,7 @@
 #include <string>
 #include <sstream>
 
-#include "EB_Device.h"
+
 #include <iostream>
 
 using namespace std;
@@ -63,13 +63,14 @@ Pol_shaft * shaft_init(float sLength);
 Pol_squares * squares_init(float side1, float pos1, float side2, float pos2);
 
 
-
 /** Function that create a string svg containing the image of the shaft and of the squares 
  * 
  *  @param myshaft stucture containg the data of the shaft
  *  @param mysquares stucture containg the data of the squares
  */
-string to_svg(EbDevice* eb_device, Pol_shaft* myshaft, Pol_squares * mysquares);
+string to_svg(Pol_shaft* myshaft, Pol_squares * mysquares);
+
+
 
 /** Function that is used to decide if adding measures to the svg file
  * @return @c bool 1 if the user want an svg WITH measures,

@@ -1,5 +1,5 @@
 #include "lever.h"
-//#include "EB_Device.h"
+#include "myMachine.h"
 //#include "../src/EB_Device.cpp"
 
 #include <iostream>
@@ -10,35 +10,7 @@
 #include <string>
 #include <sstream>
 
-
-
 using namespace std;
-
-
-//-----------------imported from EB v3.0.1
-/**
-    A function which print the 5 parameters of a device 
-**/
-void eb_printParameters(EbDevice* device){
-    cout<<"5 fondamental parameters are: "<<endl;
-    cout<<"Length shaft: "<<device -> length_shaft<<endl;
-    cout<<"Width_towtruck: "<<device -> width_towtruck<<endl;
-    cout<<"Width_platform: "<<device -> width_platform<<endl;
-    cout<<"Angle of rotation: "<<device -> rotation<<endl;
-    cout<<"Sliding: "<<device -> sliding<<endl;
-}
-
-int main() {
-    //Default sizes I created/chose for the imported device
-    //-----------------imported from EB v3.0.1
-    EbDevice* MyDevice = new EbDevice;
-    double length_shaft=300;
-    double width_towtruck=150;
-    double width_platform=350;
-    double rotation=-25;
-    double sliding=150;
-    string errormsg="ERROR 404: mechanical constraints exceeded";
-    //-----------end imported
 
     //Objects that are checked. 
     Pol_shaft* myshaft = new Pol_shaft;
@@ -48,16 +20,6 @@ int main() {
     //Objects that have to be checked. Object not checked
     Pol_shaft* tryshaft= new Pol_shaft;
     Pol_squares* trysquares= new Pol_squares;
-
-    //-----------------imported from EB v3.0.1
-    MyDevice=eb_init(length_shaft, width_towtruck, width_platform, rotation, sliding);
-    if(MyDevice==NULL){
-        cout<<errormsg<<endl;
-        exit(1);
-    }
-    eb_printParameters(MyDevice);
-    //-----------end imported
-    
 
     //Default parameters of my device
     float ShaftLength=300 ;
@@ -77,17 +39,146 @@ int main() {
 
     //Create a new string in order to create the new svg file with parameters selected, and this string is shown in terminal
     string svg_created;
-    
+
+
+    //-----------------imported from EB v3.0.1
+
+    //Default sizes I created/chose for the imported device
+    //-----------------imported from EB v3.0.1
+    EbDevice* MyDevice = new EbDevice;
+    double length_shaft=300;
+    double width_towtruck=150;
+    double width_platform=350;
+    double rotation=-25;
+    double sliding=150;
+    string errormsg="ERROR 404: mechanical constraints exceeded";
+    //-----------end imported
+
+
+
+
+
+    //-----------end imported
+/**
+    A function which print the 5 parameters of a device 
+**/
+void eb_printParameters(EbDevice* device){
+    cout<<"5 fondamental parameters are: "<<endl;
+    cout<<"Length shaft: "<<device -> length_shaft<<endl;
+    cout<<"Width_towtruck: "<<device -> width_towtruck<<endl;
+    cout<<"Width_platform: "<<device -> width_platform<<endl;
+    cout<<"Angle of rotation: "<<device -> rotation<<endl;
+    cout<<"Sliding: "<<device -> sliding<<endl;
+}
+
+int main() {    
     int fine=2;
     int choice;
     do{
         cout<<"\n Welcome! What you want to do? Type a number :"<<endl;
-        cout<<"1 - Build my device "
+        cout<<"1 - Build only my device - A Lever"<<endl;
+        cout<<"2 - Build a machine - A trolley crane with a lever"<<endl;
+        cout<<"9 - To quit/end the program"<<endl;
+        cout<<"\n Insert your option here: ";
+
+        /**I found online this formula that checks if the input is correct.. 
+         * example, it will fail if the input is a letter or not an integer (float, double..)
+        */
+        while(!(cin>> choice)){
+            cout<<"\n ERROR: an integer must be entered:";
+            cin.clear();
+            cin.ignore(132, '\n');
+        }
+        cout<<endl;
+        cout<<"DEBUG:" << choice << "\n" << endl;
+        switch (choice)
+        {
+        case 1:
+            Pol_Device();
+            fine=2;
+            break;
+        case 2:
+            int n;
+            cout<<"How many machine do you want?: ";
+            while(!(cin>> n)){
+            cout<<"\n ERROR: an integer must be entered:";
+            cin.clear();
+            cin.ignore(132, '\n');
+            }
+            Pol_Machine(n);
+            fine=2;
+            break;
+        case 9:
+            fine=0;
+            return EXIT_SUCCESS;
+        default:
+            cout<<"\n Please, enter a correct option!\n";
+            fine=1;
+            break;
+        }
 
     }while(fine==1);
 
+    
+    return EXIT_SUCCESS;
+}
+
+void Pol_Machine(int n){
+
+    cout<<"\n Doing a machine"<<endl;
+    //-----------------imported from EB v3.0.1
+    MyDevice=eb_init(length_shaft, width_towtruck, width_platform, rotation, sliding);
+    if(MyDevice==NULL){
+        cout<<errormsg<<endl;
+        exit(1);
+    }
+    eb_printParameters(MyDevice);
+
+    
+
+
+//     struct MyDevice {
+//    int i;
+// };
+ 
+// MyDevice* my_init_device(int i){
+//    cout << "Sto inizializzando " << i << endl;
+//    MyDevice* ret = new MyDevice;
+//    ret->i = i;
+//    return ret;
+// }
+ 
+// int main() {
+ 
+//    // SOLUZIONE CON ARRAY DINAMICO DI PUNTATORI A STRUCT
+  
+//    MyDevice** arr;    // notare doppio asterisco
+ 
+//    int n = 2;
+//    arr = new MyDevice* [n];  // notare asterisco dopo MyDevice
+ 
+//    MyDevice* d1 = my_init_device(1);
+//    MyDevice* d2 = my_init_device(2);
+ 
+//    arr[0] = d1;
+//    arr[1] = d2;
+ 
+//    // ...
+ 
+//    // elimino un device alla volta
+//    delete arr[0];  // oppure my_destroy_device(arr[0])  se è definita
+//    delete arr[1];  // oppure my_destroy_device(arr[1])  se è definita
+//    // ....
+ 
+//    // poi elimino tutto l'array
+//    delete[] arr;
+}
+
+void Pol_Device(){
+
+
     int c;
-    fine=2;
+    int fine=2;
     do {
         cout<<"\n Choose a command. Do you want change the default sizes? Type a number :"<<endl;
         cout<< "1 - No" <<endl;
@@ -182,7 +273,7 @@ int main() {
                 }
             case 9:
                 fine=0;
-                return EXIT_SUCCESS;
+                return exit(1);
             default:
                 cout<<"\n Please, enter a correct option!\n";
                 fine=1;
@@ -193,7 +284,7 @@ int main() {
 
 
     //Is now created a string for a svg file with the dimesions that are given    
-    svg_created = to_svg(MyDevice, myshaft, mysquares);
+    svg_created = to_svg(myshaft, mysquares);
     cout << "\n The new svg code created is:" << endl;
     cout << svg_created;
 
@@ -209,5 +300,4 @@ int main() {
     //Destroy the objects
     destroyer(myshaft, mysquares);
     
-    return EXIT_SUCCESS;
 }

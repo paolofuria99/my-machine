@@ -67,7 +67,8 @@
 			[
 				0,
 				1,
-				2
+				2,
+				3
 			]
 		}
 	],
@@ -102,7 +103,8 @@
 			[
 				0,
 				1,
-				2
+				2,
+				3
 			]
 		}
 	],
@@ -124,6 +126,12 @@
 			"backtrace" : 3,
 			"compileGroupIndex" : 0,
 			"path" : "src/EB_Device.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/myMachine.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
