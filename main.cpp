@@ -101,12 +101,13 @@ int main() {
             break;
         case 2:
             int n;
-            cout<<"How many machine do you want?: ";
-            while(!(cin>> n)){
-            cout<<"\n ERROR: an integer must be entered:";
-            cin.clear();
-            cin.ignore(132, '\n');
-            }
+            // cout<<"How many machine do you want?: ";
+            // while(!(cin>> n)){
+            // cout<<"\n ERROR: an integer must be entered:";
+            // cin.clear();
+            // cin.ignore(132, '\n');
+            // }
+            n=1;
             Pol_Machine(n);
             fine=2;
             break;
@@ -128,15 +129,14 @@ int main() {
 
 void Pol_Machine(int n){
 
-
     cout<<"\n Doing a machine"<<endl;
-    //-----------------imported from EB v3.0.1
-    MyDevice=eb_init(length_shaft, width_towtruck, width_platform, rotation, sliding);
-    if(MyDevice==NULL){
-        cout<<errormsg<<endl;
-        exit(1);
-    }
-    eb_printParameters(MyDevice);
+    // //-----------------imported from EB v3.0.1
+    // MyDevice=eb_init(length_shaft, width_towtruck, width_platform, rotation, sliding);
+    // if(MyDevice==NULL){
+    //     cout<<errormsg<<endl;
+    //     exit(1);
+    // }
+    // eb_printParameters(MyDevice);
 
     
 
@@ -182,7 +182,7 @@ void Pol_Machine(int n){
         cout<<"\n Choose a command. Do you want change the default sizes? Type a number :"<<endl;
         cout<< "1 - No" <<endl;
         cout<< "2 - Yes" <<endl;
-        cout<< "3 - Read sizes from an already existing file and storing them" << endl;
+        //cout<< "3 - Read sizes from an already existing file and storing them" << endl;
         cout<< "9 - to quit/end the program"<<endl;
         cout<< "\n Insert the option here: ";
         
@@ -285,34 +285,34 @@ void Pol_Machine(int n){
                 }
                 break;
 
-            case 3:
-                cout<<"Tell me the name of the file to get the data from (without extension): ";
-                cin>>svgfilename_from;
-                svgfilename_from+=".svg";
-                svg_readed=read_svg (svgfilename_from);
-                if (svg_readed=="no"){
-                    cout<<"something goes wrong"<<endl;
-                    fine=1;
-                    break;                    
-                }else{
-                    cout<<"The svg file readed is:"<<endl;
-                    cout<<svg_readed<<endl;
+            // case 3:
+            //     cout<<"Tell me the name of the file to get the data from (without extension): ";
+            //     cin>>svgfilename_from;
+            //     svgfilename_from+=".svg";
+            //     svg_readed=read_svg (svgfilename_from);
+            //     if (svg_readed=="no"){
+            //         cout<<"something goes wrong"<<endl;
+            //         fine=1;
+            //         break;                    
+            //     }else{
+            //         cout<<"The svg file readed is:"<<endl;
+            //         cout<<svg_readed<<endl;
                     
-                    //New objects, NOT checked, that are created from the file readed
-                    tryshaft= my_parse_shaft(svg_readed);
-                    trysquares= my_parse_squares(svg_readed);
+            //         //New objects, NOT checked, that are created from the file readed
+            //         tryshaft= my_parse_shaft(svg_readed);
+            //         trysquares= my_parse_squares(svg_readed);
 
-                    //Check of variables readed
-                    fine=my_set(tryshaft->s_length, trysquares->sq1_side, trysquares->sq1_pos, trysquares->sq2_side, trysquares->sq2_pos);
-                    if(fine==0){ 
-                        cout<<"\n DEBUG: Dimensions checked.. Creating objects.."<<endl;           
-                        //New objects, checked, that are created from the file readed
-                        myshaft=tryshaft;
-                        mysquares=trysquares;
-                    }
+            //         //Check of variables readed
+            //         fine=my_set(tryshaft->s_length, trysquares->sq1_side, trysquares->sq1_pos, trysquares->sq2_side, trysquares->sq2_pos);
+            //         if(fine==0){ 
+            //             cout<<"\n DEBUG: Dimensions checked.. Creating objects.."<<endl;           
+            //             //New objects, checked, that are created from the file readed
+            //             myshaft=tryshaft;
+            //             mysquares=trysquares;
+            //         }
                     
-                    break;
-                }
+            //         break;
+            //     }
             case 9:
                 fine=0;
                 return exit(1);
