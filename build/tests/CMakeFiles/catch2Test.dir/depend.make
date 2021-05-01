@@ -4,7 +4,6 @@
 tests/CMakeFiles/catch2Test.dir/__/src/EB_Device.cpp.o: ../include/EB_Device.h
 tests/CMakeFiles/catch2Test.dir/__/src/EB_Device.cpp.o: ../src/EB_Device.cpp
 
-tests/CMakeFiles/catch2Test.dir/__/src/lever.cpp.o: ../include/EB_Device.h
 tests/CMakeFiles/catch2Test.dir/__/src/lever.cpp.o: ../include/lever.h
 tests/CMakeFiles/catch2Test.dir/__/src/lever.cpp.o: ../src/lever.cpp
 

@@ -6,20 +6,6 @@
 
 #IncludeRegexTransform: 
 
-../include/EB_Device.h
-string.h
--
-cmath
--
-fstream
--
-streambuf
--
-string
--
-sstream
--
-
 ../include/lever.h
 string.h
 -
@@ -33,9 +19,33 @@ string
 -
 sstream
 -
-EB_Device.h
-../include/EB_Device.h
 iostream
+-
+
+/home/paolo/myMachine/include/EB_Device.h
+iostream
+-
+string.h
+-
+string
+-
+
+/home/paolo/myMachine/src/EB_Device.cpp
+../include/EB_Device.h
+/home/paolo/myMachine/include/EB_Device.h
+iostream
+-
+string.h
+-
+cmath
+-
+fstream
+-
+streambuf
+-
+string
+-
+sstream
 -
 
 /home/paolo/myMachine/src/lever.cpp
